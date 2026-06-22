@@ -63,15 +63,34 @@ main {
   outline-offset: 4px;
 }
 
-canvas {
-  width: 100%;
-  height: 100%;
-  display: block;
+.viewport {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  border-radius: var(--frame-radius);
   touch-action: manipulation;
   user-select: none;
   -webkit-user-select: none;
   outline: none;
+}
+
+.viewport canvas,
+#hud {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
   border-radius: var(--frame-radius);
+}
+
+#hud {
+  pointer-events: none;
+}
+
+.scene-canvas {
+  position: absolute;
+  inset: 0;
 }
 
 .sound-toggle {

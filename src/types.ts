@@ -31,6 +31,7 @@ export interface Berry {
 }
 
 export interface Pipe {
+  id: number;
   x: number;
   gapY: number;
   gap: number;

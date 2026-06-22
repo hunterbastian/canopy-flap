@@ -1,12 +1,16 @@
 import { initCanopyFlap } from "./canopy-flap.ts";
 import "./styles.css";
 
-const canvas = document.getElementById("game");
+const viewport = document.getElementById("viewport");
+const hudCanvas = document.getElementById("hud");
 const soundToggle = document.getElementById("sound-toggle");
 const soundLabel = document.getElementById("sound-label");
 
-if (!(canvas instanceof HTMLCanvasElement)) {
-  throw new Error("Missing #game canvas");
+if (!(viewport instanceof HTMLElement)) {
+  throw new Error("Missing #viewport element");
+}
+if (!(hudCanvas instanceof HTMLCanvasElement)) {
+  throw new Error("Missing #hud canvas");
 }
 
 function syncSoundUi(muted: boolean) {
@@ -18,7 +22,7 @@ function syncSoundUi(muted: boolean) {
   }
 }
 
-const game = initCanopyFlap(canvas, { onMuteChange: syncSoundUi });
+const game = initCanopyFlap(viewport, hudCanvas, { onMuteChange: syncSoundUi });
 syncSoundUi(game.muted);
 
 declare global {

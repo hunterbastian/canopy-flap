@@ -1,6 +1,6 @@
 # Canopy Flap
 
-A forest-canopy flappy game built with Vite and TypeScript. Guide a winged bronto through the grove, collect golden berries, nail perfect gap passes, and ride the wind at higher groves.
+A forest-canopy flappy game built with Vite, TypeScript, and Three.js. Guide a winged bronto through a 3D grove, collect golden berries, nail perfect gap passes, and ride the wind at higher groves.
 
 ## Play locally
 
