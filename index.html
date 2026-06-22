@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Canopy Flap — guide a winged bronto through the forest canopy." />
+    <title>Canopy Flap</title>
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;700;800;900&display=swap" rel="stylesheet" />
+  </head>
+  <body>
+    <main aria-label="Canopy Flap game">
+      <div class="frame" id="frame">
+        <canvas id="game" width="480" height="720" tabindex="0" aria-label="Canopy Flap canvas game"></canvas>
+        <button type="button" class="sound-toggle" id="sound-toggle" aria-label="Toggle sound" aria-pressed="false">
+          <span class="sound-toggle__label" id="sound-label">Sound on</span>
+        </button>
+        <p class="sr-only" id="instructions">
+          Press Space, W, Arrow Up, click, or tap to flap. Collect golden berries for bonus points. Pass through the center of gaps for a perfect bonus. Avoid the pipes. Press Enter, click, or tap after a crash to retry. Press M to toggle sound. Press F for fullscreen.
+        </p>
+      </div>
+    </main>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
